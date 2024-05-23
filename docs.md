@@ -10,7 +10,7 @@
 
 #### create a day creud
 
-http://localhost:8083/calendrier/medecin/2/createCreuds, method = post, 2 sends for id_medecin
+http://localhost:8083/calendrier/medecin/2/createCreudsWithPause, method = post, 2 sends for id_medecin
 
 ```json
 {
@@ -19,6 +19,16 @@ http://localhost:8083/calendrier/medecin/2/createCreuds, method = post, 2 sends 
   "workingHours": 8,
   "pauseStart": "2024-05-23T12:00:00",
   "pauseEnd": "2024-05-23T13:00:00"
+}
+```
+
+http://localhost:8083/calendrier/medecin/2/createCreudsWithoutPause, method = post, 2 sends for id_medecin
+
+```json
+{
+  "dayStart": "2024-05-24T08:00:00",
+  "workingSessionLong": 15,
+  "workingHours": 8,
 }
 ```
 
