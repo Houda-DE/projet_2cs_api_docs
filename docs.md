@@ -22,6 +22,8 @@ http://localhost:8083/calendrier/medecin/2/createCreudsWithPause, method = post,
 }
 ```
 
+#### create day creud without pause
+
 http://localhost:8083/calendrier/medecin/2/createCreudsWithoutPause, method = post, 2 sends for id_medecin
 
 ```json
@@ -31,6 +33,41 @@ http://localhost:8083/calendrier/medecin/2/createCreudsWithoutPause, method = po
   "workingHours": 8,
 }
 ```
+
+#### create month creud with pause
+
+http://localhost:8083/calendrier/medecin/1/createMonthCreudsWithPause, method = post, 2 sends for id_medecin
+
+```json
+{
+    "dayStart": "09:00:00",
+    "workingSessionLong": 30,
+    "workingHours": 8,
+    "pauseStart": "12:00:00",
+    "pauseEnd": "13:00:00",
+    "days": [1, 2, 3, 4, 5],
+    "month": 6,
+    "year": 2024
+}
+```
+
+#### create month creud without pause
+
+http://localhost:8083/calendrier/medecin/1/createMonthCreudsWithoutPause, method = post, 2 sends for id_medecin
+
+```json
+{
+{
+    "dayStart": "09:00:00",
+    "workingSessionLong": 30,
+    "workingHours": 8,
+    "days": [11, 12, 13, 14, 15],
+    "month": 6,
+    "year": 2024
+}
+}
+```
+
 
 ### demande de rendezvous
 
@@ -80,6 +117,14 @@ http://localhost:8083/rendezvous/patient/past/1 , method = get
 ### get all medecin past rendez vous
 
 http://localhost:8083/rendezvous/medecin/past/2 , method = get
+
+### get all patient today rendez vous
+
+http://localhost:8083/rendezvous/patient/today/1 , method = get
+
+### get all medecin today rendez vous
+
+http://localhost:8083/rendezvous/medecin/today/2 , method = get
 
 ### get all patient future rendez vous
 
