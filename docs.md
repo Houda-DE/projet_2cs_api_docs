@@ -57,7 +57,6 @@ http://localhost:8083/calendrier/medecin/1/createMonthCreudsWithoutPause, method
 
 ```json
 {
-{
     "dayStart": "09:00:00",
     "workingSessionLong": 30,
     "workingHours": 8,
@@ -65,9 +64,51 @@ http://localhost:8083/calendrier/medecin/1/createMonthCreudsWithoutPause, method
     "month": 6,
     "year": 2024
 }
+```
+
+#### update month creud without pause : the new one will be created without a pause, the old one can be both (with or without pause)
+
+http://localhost:8083/calendrier/medecin/1/updateMonthCreudsWithoutPause , method = put , 1 = id_medecin
+
+```json
+{
+    "dayStart": "08:00:00",
+    "workingSessionLong": 25,
+    "workingHours": 8,
+    "days": [1, 2, 3, 4, 5],
+    "month": 6,
+    "year": 2024
 }
 ```
 
+#### update month creud with pause : the new one will be created with a pause, the old one can be both (with or without pause)
+
+http://localhost:8083/calendrier/medecin/1/updateMonthCreudsWithPause , method = put , 1 = id_medecin
+
+```json
+{
+    "dayStart": "08:00:00",
+    "workingSessionLong": 25,
+    "pauseStart" : "12:00:00",
+    "pauseEnd" : "13:00:00",
+    "workingHours": 8,
+    "days": [1, 2, 3, 4, 5],
+    "month": 6,
+    "year": 2024
+}
+```
+
+#### delete day creud (both options: with and without pause)
+
+http://localhost:8083/calendrier/medecin/1/delete, method : delete , 1 = id_medecin
+
+```json
+{
+    "days": [1, 2, 3, 4, 5],
+    "month": 6,
+    "year": 2024
+}
+```
 
 ### demande de rendezvous
 
