@@ -263,3 +263,59 @@ http://localhost:8084/create/medecin/2/patient/1/add_analyse, method = post, 2 =
   ]
 }
 ```
+
+### Gets
+
+#### Get ordonnace by id
+
+http://localhost:8084/get/ordonnace/1 , method = get , 1 = id_ordonnace
+
+#### Get ordonnances by id patient
+
+http://localhost:8084/get/ordonnace/me/1 , method = get , 1 = id_patient
+
+#### Get ordonnaces by id medecin
+
+http://localhost:8084/get/ordonnace/medecin/1 , method = get , 1= id_medecin
+
+#### Get radio by id
+
+http://localhost:8084/get/radio/1 , method = get , 1= id_radio
+
+#### Get radios by id patient
+
+http://localhost:8084/get/radio/me/1 , method = get , 1 = id_patient
+
+#### Get radios by id medecin
+
+http://localhost:8084/get/radio/medecin/1 , method = get , 1= id_medecin
+
+#### Get analyse by id
+
+http://localhost:8084/get/analyse/1 , method = get , 1 = id_analyse
+
+#### Get analyses by id patient
+
+http://localhost:8084/get/analyse/me/1 , method = get , 1 = id_patient
+
+#### Get analyses by id medecin
+
+http://localhost:8084/get/analyse/medecin/1 , method = get , 1 = id_medecin
+
+#### Get dossier medical by id
+
+http://localhost:8084/get/dossier/1 , method = get , 1 = id_dossier
+
+#### Get dossier medical by id patient
+
+http://localhost:8084/get/dossier/me/1 , method = get , 1 = id_dossier
+
+#### Get dossier medical by id medecin
+
+http://localhost:8084/get/dossier/medecin/1 , method = get , 1 = id_dossier
+
+## microservice 5 : ms_notifications
+
+### Get notification (the frontent should send a request every minute , and every two hours a cron job is executed to get the new rendez vous for the next 2 hours)
+
+http://localhost:8085/api/medecin/1/rendezvous , method = get , 1 = id_medecin
